@@ -12,7 +12,7 @@ public class Rumus {
     int lebar;
     int hasil;
 
-    // Konstruktor default
+    // Konstruktor
     public Rumus() {
         sisi = 0;
         panjang = 0;
@@ -20,24 +20,33 @@ public class Rumus {
         hasil = 0;
     }
 
-    // Contoh metode
-    public int hitungLuasPersegi() {
+    // Mutator Method: Menghitung luas persegi
+    public void hitungLuasPersegi() {
         hasil = sisi * sisi;
-        return hasil;
     }
 
-    public int hitungLuasPersegiPanjang() {
+    // Mutator Method: Menghitung luas persegi panjang
+    public void hitungLuasPersegiPanjang() {
         hasil = panjang * lebar;
+    }
+
+    // Getter hasil
+    public int getHasil() {
         return hasil;
     }
 
     public static void main(String[] args) {
         Rumus r = new Rumus();
-        r.sisi = 4;
-        r.panjang = 5;
-        r.lebar = 3;
 
-        System.out.println("Luas persegi = " + r.hitungLuasPersegi());
-        System.out.println("Luas persegi panjang = " + r.hitungLuasPersegiPanjang());
+        // Persegi
+        r.sisi = 5;
+        r.hitungLuasPersegi();
+        System.out.println("Luas persegi: " + r.getHasil());
+
+        // Persegi panjang
+        r.panjang = 6;
+        r.lebar = 3;
+        r.hitungLuasPersegiPanjang();
+        System.out.println("Luas persegi panjang: " + r.getHasil());
     }
 }
