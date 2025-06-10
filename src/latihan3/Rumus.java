@@ -1,23 +1,43 @@
 package latihan3;
 
 /**
- * Nama  : [Isikan Nama Kamu]
- * NPM   : [Isikan NPM Kamu]
- * Kelas : [Isikan Kelas Kamu]
+ * Nama  : [Nama Kamu]
+ * NPM   : [NPM Kamu]
+ * Kelas : [Kelas Kamu]
  */
 public class Rumus {
+    // Atribut
+    int sisi;
+    int panjang;
+    int lebar;
+    int hasil;
 
-    // Contoh metode sederhana
-    public static int luasPersegi(int sisi) {
-        return sisi * sisi;
+    // Konstruktor default
+    public Rumus() {
+        sisi = 0;
+        panjang = 0;
+        lebar = 0;
+        hasil = 0;
     }
 
-    public static double luasLingkaran(double jariJari) {
-        return Math.PI * jariJari * jariJari;
+    // Contoh metode
+    public int hitungLuasPersegi() {
+        hasil = sisi * sisi;
+        return hasil;
+    }
+
+    public int hitungLuasPersegiPanjang() {
+        hasil = panjang * lebar;
+        return hasil;
     }
 
     public static void main(String[] args) {
-        System.out.println("Luas persegi dengan sisi 4 = " + luasPersegi(4));
-        System.out.println("Luas lingkaran dengan jari-jari 3 = " + luasLingkaran(3));
+        Rumus r = new Rumus();
+        r.sisi = 4;
+        r.panjang = 5;
+        r.lebar = 3;
+
+        System.out.println("Luas persegi = " + r.hitungLuasPersegi());
+        System.out.println("Luas persegi panjang = " + r.hitungLuasPersegiPanjang());
     }
 }
