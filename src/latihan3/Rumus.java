@@ -12,12 +12,29 @@ public class Rumus {
     int lebar;
     int hasil;
 
-    // Konstruktor
+    // Konstruktor: Inisialisasi semua atribut ke nol
     public Rumus() {
         sisi = 0;
         panjang = 0;
         lebar = 0;
         hasil = 0;
+    }
+
+    // Accessor Methods (Getter)
+    public int getSisi() {
+        return sisi;
+    }
+
+    public int getPanjang() {
+        return panjang;
+    }
+
+    public int getLebar() {
+        return lebar;
+    }
+
+    public int getHasil() {
+        return hasil;
     }
 
     // Mutator Method: Menghitung luas persegi
@@ -30,20 +47,15 @@ public class Rumus {
         hasil = panjang * lebar;
     }
 
-    // Getter hasil
-    public int getHasil() {
-        return hasil;
-    }
-
     public static void main(String[] args) {
         Rumus r = new Rumus();
 
-        // Persegi
+        // Set nilai sisi untuk persegi
         r.sisi = 5;
         r.hitungLuasPersegi();
         System.out.println("Luas persegi: " + r.getHasil());
 
-        // Persegi panjang
+        // Set nilai panjang dan lebar untuk persegi panjang
         r.panjang = 6;
         r.lebar = 3;
         r.hitungLuasPersegiPanjang();
